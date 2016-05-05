@@ -57,8 +57,8 @@ get '/callback' do
   #We can do a Post now to get the access token
   uri = URI.parse("https://api.intercom.io/auth/eagle/token")
   response = Net::HTTP.post_form(uri, {"code" => params[:code],
-                                       "client_id" => "212a4d34-f160-42b5-8010-83af85f91b0f",
-                                       "client_secret" => "054d68dd-fa51-4347-a522-980e87c1fb3f"})
+                                       "client_id" => "<CLIENT_ID>",
+                                       "client_secret" => "<CLIENT_SECRET>"})
 
   #Break Up the response and print out the Access Token
   rsp = JSON.parse(response.body)
